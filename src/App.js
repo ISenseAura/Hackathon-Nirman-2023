@@ -1,14 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import About from './components/About';
+import Footer from './components/Footer';
+import Features from './components/Features';
+import Cards from './components/Cards';
+import Register from './components/Register';
+import Chat from './components/Chat';
+import UserHome from './components/dashboard/UserHome';
 
 function App() {
   return (
-    <body class="page-index">
-      <Home />
- <Navbar/>
- </body>
+  
+<Router>
+<Switch>
+            <Route exact path="/"><UserHome /></Route>
+            <Route exact path="/reg"><Register /></Route>
+
+          </Switch>
+</Router>
+
+
+
+
+
+
+
+
   
   );
 }

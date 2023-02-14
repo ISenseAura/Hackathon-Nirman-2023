@@ -1,6 +1,6 @@
 /**
-* Template Name: Nova - v1.3.0
-* Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+* Template Name: AGNUS - v1.3.0
+* Template URL: https://bootstrapmade.com/AGNUS-bootstrap-business-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -195,3 +195,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+new PureCounter();
