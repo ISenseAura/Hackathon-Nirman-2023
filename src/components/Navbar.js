@@ -18,23 +18,6 @@ let Navbar = () => {
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="team.html">Team</a></li>
               <li><a href="blog.html">Blog</a></li>
-              <li className="dropdown"><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down dropdown-indicator" /></a>
-                <ul>
-                  <li><a href="#">Dropdown 1</a></li>
-                  <li className="dropdown"><a href="#"><span>Deep Dropdown</span> <i className="bi bi-chevron-down dropdown-indicator" /></a>
-                    <ul>
-                      <li><a href="#">Deep Dropdown 1</a></li>
-                      <li><a href="#">Deep Dropdown 2</a></li>
-                      <li><a href="#">Deep Dropdown 3</a></li>
-                      <li><a href="#">Deep Dropdown 4</a></li>
-                      <li><a href="#">Deep Dropdown 5</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Dropdown 2</a></li>
-                  <li><a href="#">Dropdown 3</a></li>
-                  <li><a href="#">Dropdown 4</a></li>
-                </ul>
-              </li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>{/* .navbar */}
