@@ -52,7 +52,7 @@ let UserHome = (props) => {
           <i className="bi bi-list toggle-sidebar-btn" />
         </div>
         {/* End d-logo */}
-        <div className="search-bar" style={{ background: "#fff7e4" }}>
+        <div className="search-bar" style = {{background : "#fff7e4"}}>
           <form
             className="search-form d-flex align-items-center"
             method="POST"

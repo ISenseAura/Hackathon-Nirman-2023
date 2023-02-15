@@ -81,6 +81,7 @@ let UserHome = (props) => {
               
               placeholder="Find Connections"
               title="Enter search keyword"
+              style = {{background : "#fff7e4"}}
             />
             <button title="Search"  data-bs-toggle="modal" data-bs-target="#basicModal">
               <i className="bi bi-search" />
