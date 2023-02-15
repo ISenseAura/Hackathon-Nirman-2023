@@ -1,3 +1,5 @@
+
+import { Outlet, Link } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import "./dashboard.css";
 import Profile from "./AdminProfile";
@@ -52,7 +54,7 @@ let UserHome = (props) => {
           <i className="bi bi-list toggle-sidebar-btn" />
         </div>
         {/* End d-logo */}
-        <div className="search-bar" style = {{background : "#fff7e4"}}>
+        <div className="search-bar">
           <form
             className="search-form d-flex align-items-center"
             method="POST"
@@ -267,25 +269,13 @@ let UserHome = (props) => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center"
-                    href="users-profile.html"
+                    to = "/AdminProfile"
                   >
                     <i className="bi bi-person" />
                     <span>My Profile</span>
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item d-flex align-items-center"
-                    href="users-profile.html"
-                  >
-                    <i className="bi bi-gear" />
-                    <span>Account Settings</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />

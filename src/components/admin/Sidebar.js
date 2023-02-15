@@ -49,7 +49,7 @@ let Sidebar = () => {
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
           <Link className="nav-link collapsed" to="/adminchats" style = {{background : "#ffdf94"}}>
-            <i className="bi bi-question-circle" />
+            <i className="bi bi-chat-fill" />
             <span>Chats</span>
           </Link>
         </li>{/* End F.A.Q Page Nav */}
@@ -59,18 +59,7 @@ let Sidebar = () => {
             <span>Contact</span>
           </a>
         </li>{/* End Contact Page Nav */}
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-register.html" style = {{background : "#ffdf94"}}>
-            <i className="bi bi-card-list" />
-            <span>Register</span>
-          </a>
-        </li>{/* End Register Page Nav */}
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-login.html" style = {{background : "#ffdf94"}}>
-            <i className="bi bi-box-arrow-in-right" />
-            <span>Login</span>
-          </a>
-        </li>{/* End Login Page Nav */}
+        
       </ul>
     </aside>
 }

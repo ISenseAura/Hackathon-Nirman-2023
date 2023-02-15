@@ -1,4 +1,5 @@
 
+import { Outlet, Link } from "react-router-dom";
 import React from 'react'
 import Dashboard from "./Dashboard";
 import "./dashboard.css";
@@ -284,25 +285,13 @@ let UserHome = (props) => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center"
-                    href="users-profile.html"
+                    to="/profile"
                   >
                     <i className="bi bi-person" />
                     <span>My Profile</span>
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item d-flex align-items-center"
-                    href="users-profile.html"
-                  >
-                    <i className="bi bi-gear" />
-                    <span>Account Settings</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />

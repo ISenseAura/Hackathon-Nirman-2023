@@ -127,27 +127,19 @@ setCurrentRoom(room2);
         <div className="row">
           <div className="col-lg-3">
             <div className="card">
-<<<<<<< HEAD
               <div className="card-body" style = {{background : "#fff7e4"}}>
-=======
-              <div className="card-body" >
->>>>>>> 01b950efe1cbe5653090d6a219b2f85c3f4edd17
                 <h5 className="card-title">
                   Chats{" "}
                 </h5>
                 {/* List group with custom content */}
-<<<<<<< HEAD
-                <ul className="list-group list-group-numbered" >
-=======
-                <ul className="list-group list-group-numbered" style={{overflow:"scroll", maxHeight:"80vh"}}>
->>>>>>> 01b950efe1cbe5653090d6a219b2f85c3f4edd17
+                <ul className="list-group list-group-numbered" style={{overflow:"scroll", maxHeight:"60vh"}}>
 
 
                 {rooms.map((room) => {
                 
                   console.log(room)
-                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room)}}>
-                            <div className="ms-2 me-auto">
+                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room)}} style = {{background : "#fff7e4"}}>
+                            <div className="ms-2 me-auto" >
                               <div className="fw-bold">{room.fname + " " + room.lname}</div>
                              <small> from <i><small>{room.cname}</small></i></small>
                             </div>
