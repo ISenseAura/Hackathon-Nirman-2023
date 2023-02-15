@@ -31,7 +31,11 @@ let Profile = () => {
   };
 
   return (
+<<<<<<< HEAD
     <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce"}}>
+=======
+    <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce",height:"100vh"}}>
+>>>>>>> 01b950efe1cbe5653090d6a219b2f85c3f4edd17
       <section className="section profile">
         <div className="row">
           <div className="col-xl-4">
