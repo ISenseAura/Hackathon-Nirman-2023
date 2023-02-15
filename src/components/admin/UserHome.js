@@ -1,17 +1,43 @@
+import Dashboard from "./Dashboard";
 import "./dashboard.css"
 import Profile from "./Profile";
 import Sidebar from "./Sidebar";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import getUser from "../../plugins/user"
 
-let UserHome = () => {
+let UserHome = (props) => {
+  const navigate = useHistory();
+console.log(getUser());
+if(!localStorage.getItem("uid")) navigate.push("/")
+function signout() {
+  localStorage.removeItem("uid");
+  navigate.push("/")
+}
+
+
+
+
+  let [user, setUser] = useState(false);
+
+  if(!user) {
+    getUser().then((data) => {
+    
+      setUser(data)
+    })
+  }
+
+
+
     return     <>
       <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="d-flex align-items-center justify-content-between">
-      <a href="index.html" className="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="" />
+      <a href="index.html" className="d-logo d-flex align-items-center">
+        <img src="assets/img/d-logo.png" alt="" />
         <span className="d-none d-lg-block">AGNUS</span>
       </a>
       <i className="bi bi-list toggle-sidebar-btn" />
-    </div>{/* End Logo */}
+    </div>{/* End d-logo */}
     <div className="search-bar">
       <form className="search-form d-flex align-items-center" method="POST" action="#">
         <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
@@ -147,12 +173,12 @@ let UserHome = () => {
         <li className="nav-item dropdown pe-3">
           <a className="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" className="rounded-circle" />
-            <span className="d-none d-md-block dropdown-toggle ps-2">Test name</span>
+            <span className="d-none d-md-block dropdown-toggle ps-2">{user.fname}</span>
           </a>{/* End Profile Iamge Icon */}
           <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li className="dropdown-header">
-              <h6>Test Name</h6>
-              <span>College Authority</span>
+              <h6>{user.fname + " " + user.lname}</h6>
+              <span>Web Designer</span>
             </li>
             <li>
               <hr className="dropdown-divider" />
@@ -185,7 +211,7 @@ let UserHome = () => {
               <hr className="dropdown-divider" />
             </li>
             <li>
-              <a className="dropdown-item d-flex align-items-center" href="#">
+              <a className="dropdown-item d-flex align-items-center" onClick={signout} href="#">
                 <i className="bi bi-box-arrow-right" />
                 <span>Sign Out</span>
               </a>
@@ -195,8 +221,12 @@ let UserHome = () => {
       </ul>
     </nav>{/* End Icons Navigation */}
   </header>
+
   <Sidebar/>
-  <Profile/>
+  {
+  props.tab === "profile" ? <Profile/> : (props.tab === "dashboard" ? <Dashboard/> : "")
+}
+  
   </>
 }
 

@@ -2,12 +2,14 @@ import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Register from "./components/Register";
-import UserHome from "./components/dashboard/UserHome";
+//import UserHome from "./components/dashboard/UserHome";
+import UserHome from "./components/admin/UserHome";
 import Home from "./components/Home"
+import C from "./components/c"
 
 function App() {
   return (
-  
+
 <Router>
 <Switch>
             <Route exact path="/"><Home /></Route>
