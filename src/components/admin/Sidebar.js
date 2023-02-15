@@ -48,7 +48,7 @@ let Sidebar = () => {
           </Link>
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
-          <Link className="nav-link collapsed" to="pages-faq.html" style = {{background : "#ffdf94"}}>
+          <Link className="nav-link collapsed" to="/adminchats" style = {{background : "#ffdf94"}}>
             <i className="bi bi-question-circle" />
             <span>Chats</span>
           </Link>
