@@ -8,6 +8,7 @@ import UserHome from "./components/dashboard/UserHome";
 import Home from "./components/Home"
 import C from "./components/c"
 import Dashboard from "./components/dashboard/Dashboard";
+import Search from "./components/dashboard/Search";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             <Route exact path="/adminprofile"><AdminUserHome tab="profile" /></Route>
             <Route exact path="/profile"><UserHome tab="profile" /></Route>
             <Route exact path="/chats"><UserHome tab="chats" /></Route>
+
+            <Route exact path="/search/:id"><UserHome tab="search" /></Route>
+
             <Route exact path="/adminchats"><AdminUserHome tab="chats" /></Route>
             <Route exact path="/adminalumnis"><AdminUserHome tab="alumnis" /></Route>
 

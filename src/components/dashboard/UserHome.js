@@ -11,12 +11,14 @@ import getUser from "../../plugins/user";
 import ChatHome from "../chatsystem/ChatHome";
 
 import {io} from 'socket.io-client'
+import Search from './Search';
 
 let UserHome = (props) => {
 
 
   function handleSubmit(e) {
     e.preventDefault();
+    navigate.push("/search/" + search);
 
   }
 
@@ -30,6 +32,7 @@ let UserHome = (props) => {
   }
 
   let [user, setUser] = useState(false);
+  let [search, setSearch] = useState(false);
 
   if (!user) {
     getUser().then((data) => {
@@ -53,6 +56,14 @@ let UserHome = (props) => {
    
 
   }
+
+  const onChange = (e)=>{
+    setSearch(e.target.value)
+}
+
+
+
+
     return     (<> <header id="header" className="header fixed-top d-flex align-items-center" style={{background:"#fedf8f"}}>
     <div className="d-flex align-items-center justify-content-between">
       <a href="index.html" className="d-logo d-flex align-items-center">
@@ -78,11 +89,12 @@ let UserHome = (props) => {
           >
             <input
               type="text"
-              
+              value={search}
+              onChange={onChange}
               placeholder="Find Connections"
               title="Enter search keyword"
             />
-            <button title="Search"  data-bs-toggle="modal" data-bs-target="#basicModal">
+            <button title="Search" >
               <i className="bi bi-search" />
             </button>
           </form>
@@ -366,6 +378,8 @@ let UserHome = (props) => {
         <Dashboard />
       ) : props.tab === "chats" ? (
         <ChatHome />
+      ) : props.tab === "search" ? (
+        <Search />
       ) : (
         ""
       )}
