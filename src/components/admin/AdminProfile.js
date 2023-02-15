@@ -90,7 +90,7 @@ let Profile = () => {
                     <div className="row mb-3">
                       <label htmlFor="about" className="col-md-4 col-lg-3 col-form-label">About</label>
                       <div className="col-md-8 col-lg-9">
-                        <textarea name="about" className="form-control" id="about" style={{height: '100px'}} defaultValue={"Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde."} style = {{background : "#fff7e4"}}/>
+                        <textarea name="about" className="form-control" id="about" style={{height: '100px', background : "#fff7e4}} defaultValue={"Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde."} />
                       </div>
                     </div>
                     <div className="row mb-3">
