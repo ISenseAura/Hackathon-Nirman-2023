@@ -86,7 +86,7 @@ console.log(data.user.fname);
 function sendMsg() {
   let data = {
     from : localStorage.getItem("user").email,
-    to: currentRoom,
+    to: currentRoom.email,
     msg : msg,
     date : new Date(),
     user: JSON.parse(localStorage.getItem("user"))
@@ -97,7 +97,12 @@ function sendMsg() {
 
   function updateRoom(room) {
     console.log("ROom updated");
-setCurrentRoom(room);
+    
+    let room2 = {
+      email : room.email,
+      name : room.fname + " " + room.lname,
+    }
+setCurrentRoom(room2);
   }
 
   const onChange = (e)=>{
@@ -134,7 +139,7 @@ setCurrentRoom(room);
                 {rooms.map((room) => {
                 
                   console.log(room)
-                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room.email)}}>
+                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room)}}>
                             <div className="ms-2 me-auto">
                               <div className="fw-bold">{room.fname + " " + room.lname}</div>
                              <small> from <i><small>{room.cname}</small></i></small>
@@ -156,50 +161,12 @@ setCurrentRoom(room);
             <div className="card b-2">
               <div className="card-body b-2" style={{ width: "100%" }}>
                 <h5 className="card-title ">
-                  <b> Example Card</b>
+                  <b> {currentRoom.name}</b>
                 </h5>
                 <div id="msgs" className="msg-wrap">
-                  <div className="fromMsg">
-                    <span className="op">Mayur</span>{" "}
-                    <span className="time"> 03:00PM</span>
-                    <br></br>
-                    <p className="msg">
-                      {" "}
-                      <span>
-                        Testingghggggggggg gggggggggggggggg ggggggggggg
-                        gggggggggg gggggggggggggggg ggggggggggg gggggggggg
-                        gggggggggggggggg ggggggggggg gggggggggg
-                      </span>{" "}
-                    </p>
-                  </div>
+                
 
-                  <div className="fromMsg">
-                    <span className="op">Mayur</span>{" "}
-                    <span className="time"> 03:00PM</span>
-                    <br></br>
-                    <p className="msg">
-                      {" "}
-                      <span>
-                        Testingghggggggggg gggggggggggggggg ggggggggggg
-                        gggggggggg gggggggggggggggg ggggggggggg gggggggggg
-                        gggggggggggggggg ggggggggggg gggggggggg
-                      </span>{" "}
-                    </p>
-                  </div>
-
-                  <div className="fromMsg">
-                    <span className="op">You</span>{" "}
-                    <span className="time"> 03:00PM</span>
-                    <br></br>
-                    <p className="msg">
-                      {" "}
-                      <span>
-                        Testingghggggggggg gggggggggggggggg ggggggggggg
-                        gggggggggg gggggggggggggggg ggggggggggg gggggggggg
-                        gggggggggggggggg ggggggggggg gggggggggg
-                      </span>{" "}
-                    </p>
-                  </div>
+        
                 </div>
                 <div className="input-group mb-3 m-2" style={{ width: "99%" }}>
                   {" "}
