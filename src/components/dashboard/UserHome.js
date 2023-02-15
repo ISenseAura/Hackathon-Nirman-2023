@@ -35,7 +35,7 @@ function signout() {
     if(user.isCollegeAdmin) navigate.push("/admin")
   }
     return     <>
-      <header id="header" className="header fixed-top d-flex align-items-center">
+      <header id="header" className="header fixed-top d-flex align-items-center" style={{background:"#fedf8f"}}>
     <div className="d-flex align-items-center justify-content-between">
       <a href="index.html" className="d-logo d-flex align-items-center">
         <img src="assets/img/d-logo.png" alt="" />

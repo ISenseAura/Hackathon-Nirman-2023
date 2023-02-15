@@ -39,7 +39,7 @@ function signout() {
 
 
     return     <>
-      <header id="header" className="header fixed-top d-flex align-items-center">
+      <header id="header" className="header fixed-top d-flex align-items-center" style={{background:"#fedf8f"}}>
     <div className="d-flex align-items-center justify-content-between">
 
       <a href="/admin" className="d-logo d-flex align-items-center">
