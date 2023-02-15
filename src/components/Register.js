@@ -15,7 +15,8 @@ let Register = () => {
   state : "",
   pin : "",
 addr : "",
-yog: ""
+yog: "",
+about : ""
 });
   let [next, setNext] = useState(false);
 
@@ -38,7 +39,8 @@ yog: ""
         yog : credentials.yog,
         state : credentials.state,
         pin : credentials.pin,
-        addr: credentials.addr
+        addr: credentials.addr,
+        about : credentials.about
 
 
       }),
