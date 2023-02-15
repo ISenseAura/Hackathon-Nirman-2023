@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import getUser from "../../plugins/user"
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 
 let UserHome = (props) => {
   const navigate = useHistory();
@@ -24,7 +25,13 @@ function signout() {
     getUser().then((data) => {
     
       setUser(data)
+      processFurther(data);
     })
+  }
+
+
+  function processFurther(user) {
+    if(!user.isCollegeAdmin) navigate.push("/dashboard")
   }
 
 

@@ -24,11 +24,14 @@ function signout() {
     getUser().then((data) => {
     
       setUser(data)
+      processFurther(data);
     })
   }
 
 
-
+  function processFurther(user) {
+    if(user.isCollegeAdmin) navigate.push("/admin")
+  }
     return     <>
       <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="d-flex align-items-center justify-content-between">
