@@ -1,13 +1,13 @@
 import './dashboard.css'
 
 let Dashboard = () => {
-    return    <main id="main" className="main" style={{marginTop:"0px"}}>
+    return    <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce"}}>
   
-    <section className="section">
+    <section className="section" >
       <div className="row">
         <div className="col-lg-6">
           <div className="card">
-            <div className="card-body">
+            <div className="card-body" style = {{background : "#fff7e4"}}>
               <h5 className="card-title">This Week </h5>
               {/* Default List group */}
               <ul className="list-group">

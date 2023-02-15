@@ -83,12 +83,12 @@ let Profile = () => {
   };
 
   return (
-    <main id="main" className="main" style = {{marginTop:"0px"}}>
+    <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce"}}>
       <section className="section profile">
         <div className="row">
           <div className="col-xl-4">
             <div className="card">
-              <div className="card-body profile-card pt-4 d-flex flex-column align-items-center">
+              <div className="card-body profile-card pt-4 d-flex flex-column align-items-center" style = {{background : "#fff7e4"}}>
                 <img
                   src="assets/img/profile-img.jpg"
                   alt="Profile"
@@ -113,9 +113,9 @@ let Profile = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-8">
+          <div className="col-xl-8" >
             <div className="card">
-              <div className="card-body pt-3">
+              <div className="card-body pt-3" style = {{background : "#fff7e4"}}>
                 {/* Bordered Tabs */}
                 <ul className="nav nav-tabs nav-tabs-bordered">
                   <li className="nav-item">
@@ -123,6 +123,7 @@ let Profile = () => {
                       className="nav-link active"
                       data-bs-toggle="tab"
                       data-bs-target="#profile-overview"
+                      style = {{background : "#fff7e4"}}
                     >
                       Overview
                     </button>
@@ -132,6 +133,7 @@ let Profile = () => {
                       className="nav-link"
                       data-bs-toggle="tab"
                       data-bs-target="#profile-edit"
+                      style = {{background : "#fff7e4"}}
                     >
                       Edit Profile
                     </button>
@@ -141,6 +143,7 @@ let Profile = () => {
                       className="nav-link"
                       data-bs-toggle="tab"
                       data-bs-target="#profile-settings"
+                      style = {{background : "#fff7e4"}}
                     >
                       Settings
                     </button>
@@ -150,6 +153,7 @@ let Profile = () => {
                       className="nav-link"
                       data-bs-toggle="tab"
                       data-bs-target="#profile-change-password"
+                      style = {{background : "#fff7e4"}}
                     >
                       Change Password
                     </button>
@@ -247,6 +251,7 @@ let Profile = () => {
                             defaultValue={user.fname}
                             id="fname"
                             name="fname"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -265,6 +270,7 @@ let Profile = () => {
                             onChange={onChange}
                             id="lname"
                             name="lname"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -283,7 +289,7 @@ let Profile = () => {
                             name="about"
                             className="form-control"
                             
-                            style={{ height: "100px" }}
+                            style={{ height: "100px", background : "#fff7e4"}}
                            
                           />
                         </div>
@@ -302,6 +308,7 @@ let Profile = () => {
                              id="cname"
                              name="cname"
                             className="form-control"
+                            style = {{background : "#fff7e4"}}
                             
                           
                           />
@@ -321,6 +328,7 @@ let Profile = () => {
                             id="yog"
                             name="yog"
                             className="form-control"
+                            style = {{background : "#fff7e4"}}
                           
                           />
                         </div>
@@ -339,6 +347,7 @@ let Profile = () => {
                             className="form-control"
                             id="Country"
                             defaultValue="USA"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -356,6 +365,7 @@ let Profile = () => {
                             className="form-control"
                             id="Address"
                             defaultValue="A108 Adam Street, New York, NY 535022"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -373,6 +383,7 @@ let Profile = () => {
                             className="form-control"
                             id="Phone"
                             defaultValue="(436) 486-3538 x29071"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -390,6 +401,7 @@ let Profile = () => {
                             className="form-control"
                             id="Email"
                             defaultValue="k.anderson@example.com"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -409,6 +421,7 @@ let Profile = () => {
                             onChange={onChange}
                             id="twitter"
                             name="twitter"
+                            style = {{background : "#fff7e4"}}
   
                           />
                         </div>
@@ -428,6 +441,7 @@ let Profile = () => {
                             onChange={onChange}
                             id="facebook"
                             name="facebook"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -446,6 +460,7 @@ let Profile = () => {
                             onChange={onChange}
                             id="instagram"
                             name="instagram"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -464,11 +479,12 @@ let Profile = () => {
                             onChange={onChange}
                             id="linkedin"
                             name="linkedin"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
                       <div className="text-center">
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary" style = {{background : "#ffc93d"}}>
                           Save Changes
                         </button>
                       </div>
@@ -545,7 +561,7 @@ let Profile = () => {
                         </div>
                       </div>
                       <div className="text-center">
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary" style = {{background : "#ffc93d"}}>
                           Save Changes
                         </button>
                       </div>
@@ -571,6 +587,7 @@ let Profile = () => {
                             type="password"
                             className="form-control"
                             id="currentPassword"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -587,6 +604,7 @@ let Profile = () => {
                             type="password"
                             className="form-control"
                             id="newPassword"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
@@ -603,11 +621,12 @@ let Profile = () => {
                             type="password"
                             className="form-control"
                             id="renewPassword"
+                            style = {{background : "#fff7e4"}}
                           />
                         </div>
                       </div>
                       <div className="text-center">
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary" style = {{background : "#ffc93d"}}>
                           Change Password
                         </button>
                       </div>

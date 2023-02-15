@@ -2,21 +2,21 @@ import "./dashboard.css";
 import { Outlet, Link } from "react-router-dom";
 
 let Sidebar = () => {
-    return  <aside id="sidebar" className="sidebar">
+    return  <aside id="sidebar" className="sidebar" style = {{background : "#ffdf94"}}>
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
-          <a className="nav-link " href="/admin">
+          <a className="nav-link " href="/admin" style = {{background : "#ffdf94"}}>
             <i className="bi bi-grid" />
             <span>Dashboard</span>
           </a>
         </li>{/* End Dashboard Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#" style = {{background : "#ffdf94"}}>
             <i className="bi bi-layout-text-window-reverse" /><span>Tables</span><i className="bi bi-chevron-down ms-auto" />
           </a>
           <ul id="tables-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="tables-general.js">
+              <a href="tables-general.js" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>General Tables</span>
               </a>
             </li>
@@ -28,7 +28,7 @@ let Sidebar = () => {
           </ul>
         </li>{/* End Tables Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#" style = {{background : "#ffdf94"}}>
             <i className="bi bi-bar-chart" /><span>Charts</span><i className="bi bi-chevron-down ms-auto" />
           </a>
           <ul id="charts-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -51,31 +51,31 @@ let Sidebar = () => {
         </li>{/* End Charts Nav */}
         <li className="nav-heading">Pages</li>
         <li className="nav-item">
-        <Link className="nav-link collapsed" to="/AdminProfile">
+        <Link className="nav-link collapsed" to="/AdminProfile" style = {{background : "#ffdf94"}}>
             <i className="bi bi-person" />
             <span>Profile</span>
           </Link>
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-faq.html">
+          <a className="nav-link collapsed" href="pages-faq.html" style = {{background : "#ffdf94"}}>
             <i className="bi bi-question-circle" />
             <span>F.A.Q</span>
           </a>
         </li>{/* End F.A.Q Page Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-contact.html">
+          <a className="nav-link collapsed" href="pages-contact.html" style = {{background : "#ffdf94"}}>
             <i className="bi bi-envelope" />
             <span>Contact</span>
           </a>
         </li>{/* End Contact Page Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-register.html">
+          <a className="nav-link collapsed" href="pages-register.html" style = {{background : "#ffdf94"}}>
             <i className="bi bi-card-list" />
             <span>Register</span>
           </a>
         </li>{/* End Register Page Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-login.html">
+          <a className="nav-link collapsed" href="pages-login.html" style = {{background : "#ffdf94"}}>
             <i className="bi bi-box-arrow-in-right" />
             <span>Login</span>
           </a>
