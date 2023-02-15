@@ -12,8 +12,8 @@ function App() {
 <Switch>
             <Route exact path="/"><Home /></Route>
             <Route exact path="/register"><Register /></Route>
-            <Route exact path="/dashboard"><UserHome /></Route>
-            <Route exact path="/profile"><UserHome /></Route>
+            <Route exact path="/dashboard"><UserHome tab="dashboard"/></Route>
+            <Route exact path="/profile"><UserHome tab="profile" /></Route>
 
           </Switch>
 </Router>

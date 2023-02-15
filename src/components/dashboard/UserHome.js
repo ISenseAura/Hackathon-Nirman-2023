@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import getUser from "../../plugins/user"
 
-let UserHome = () => {
+let UserHome = (props) => {
   const navigate = useHistory();
 console.log(getUser());
 if(!localStorage.getItem("uid")) navigate.push("/")
@@ -26,6 +26,7 @@ function signout() {
       setUser(data)
     })
   }
+
 
 
     return     <>
@@ -220,9 +221,12 @@ function signout() {
       </ul>
     </nav>{/* End Icons Navigation */}
   </header>
+
   <Sidebar/>
-  <Dashboard/>
-  <Profile/>
+  {
+  props.tab === "profile" ? <Profile/> : (props.tab === "dashboard" ? <Dashboard/> : "")
+}
+  
   </>
 }
 

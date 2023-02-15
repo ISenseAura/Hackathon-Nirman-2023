@@ -176,7 +176,7 @@ let Sidebar = () => {
         </li>{/* End Icons Nav */}
         <li className="nav-heading">Pages</li>
         <li className="nav-item">
-          <Link className="nav-link collapsed" href="/profile">
+          <Link className="nav-link collapsed" to="/profile">
             <i className="bi bi-person" />
             <span>Profile</span>
           </Link>
