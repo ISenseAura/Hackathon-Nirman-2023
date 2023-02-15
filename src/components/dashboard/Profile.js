@@ -2,11 +2,6 @@ import "./dashboard.css";
 
 import getUser from "../../plugins/user";
 import { useState } from "react";
-
-import { useHistory } from "react-router-dom";
-
-let serverAdd = "http://127.0.0.1:8080";
-
 let Profile = () => {
   let [user, setUser] = useState(false);
   if (!user) {
@@ -28,62 +23,28 @@ let Profile = () => {
     addr: user.addr,
     yog: user.yog,
     about: user.about,
-    twitter: user.twitter,
-    facebook: user.facebook,
-    instagram: user.instagram,
-    linkedin: user.linkedin,
-
   });
-   
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await fetch(serverAdd + "/updateuser", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: credentials.email,
-        password: credentials.password,
-        fname: credentials.fname,
-        lname : credentials.lname,
-        dob : credentials.dob,
-        cname : credentials.cname,
-        dep: credentials.dep,
-        branch : credentials.branch,
-        yog : credentials.yog,
-        state : credentials.state,
-        pin : credentials.pin,
-        addr: credentials.addr,
-        about : credentials.about,
-        twitter: user.twitter,
-        facebook: user.facebook,
-        instagram: user.instagram,
-        linkedin: user.linkedin,
-
-
-      }),
-    });
-    const json = await response.json();
-    console.log(json);
-    if (json) {
-      // Save the auth token and redirect
-     // localStorage.setItem("uid", json.status.user.uid);
-      console.log(localStorage.getItem("uid"));
-      
-      //navigate.push("/dashboard");
-    } else {
-      console.log("Dude!", "Invalid credentials");
-    }
-  };
+  
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
   return (
-    <main id="main" className="main" style = {{marginTop:"0px"}}>
+    <main id="main" className="main">
+      <div className="pagetitle">
+        <h1>Profile</h1>
+        <nav>
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+              <a href="index.html">Home</a>
+            </li>
+            <li className="breadcrumb-item">Users</li>
+            <li className="breadcrumb-item active">Profile</li>
+          </ol>
+        </nav>
+      </div>
+      {/* End Page Title */}
       <section className="section profile">
         <div className="row">
           <div className="col-xl-4">
@@ -203,7 +164,7 @@ let Profile = () => {
                     id="profile-edit"
                   >
                     {/* Profile Edit Form */}
-                    <form onSubmit = {handleSubmit}>
+                    <form>
                       <div className="row mb-3">
                         <label
                           htmlFor="profileImage"
@@ -402,14 +363,11 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
-                           
+                            name="twitter"
                             type="text"
                             className="form-control"
-                            value={credentials.twitter ? credentials.twitter : user.twitter}
-                            onChange={onChange}
-                            id="twitter"
-                            name="twitter"
-  
+                            id="Twitter"
+                            defaultValue="https://twitter.com/#"
                           />
                         </div>
                       </div>
@@ -422,12 +380,11 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
+                            name="facebook"
                             type="text"
                             className="form-control"
-                            value={credentials.facebook ? credentials.facebook : user.facebook}
-                            onChange={onChange}
-                            id="facebook"
-                            name="facebook"
+                            id="Facebook"
+                            defaultValue="https://facebook.com/#"
                           />
                         </div>
                       </div>
@@ -440,12 +397,11 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
+                            name="instagram"
                             type="text"
                             className="form-control"
-                            value={credentials.instagram ? credentials.instagram : user.instagram}
-                            onChange={onChange}
-                            id="instagram"
-                            name="instagram"
+                            id="Instagram"
+                            defaultValue="https://instagram.com/#"
                           />
                         </div>
                       </div>
@@ -458,12 +414,11 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
+                            name="linkedin"
                             type="text"
                             className="form-control"
-                            value={credentials.linkedin ? credentials.linkedin : user.linkedin}
-                            onChange={onChange}
-                            id="linkedin"
-                            name="linkedin"
+                            id="Linkedin"
+                            defaultValue="https://linkedin.com/#"
                           />
                         </div>
                       </div>
