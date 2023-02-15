@@ -10,6 +10,7 @@ let Dashboard = () => {
             <div className="card-body" style = {{background : "#fff7e4"}}>
               <h5 className="card-title">This Week </h5>
               {/* Default List group */}
+              <a href = '' style = {{background : "#fff7e4"}}>
               <ul className="list-group">
                 <li className="list-group-item"><big>15</big> -  No event</li>
                 <li className="list-group-item"><big>16</big> -  No event</li>
@@ -18,7 +19,7 @@ let Dashboard = () => {
                 <li className="list-group-item"><big>19</big> -  No event</li>
                 <li className="list-group-item"><big>20</big> -  No event</li>
                 <li className="list-group-item"><big>21</big> -  No event</li>
-              </ul>{/* End Default List group */}
+              </ul></a>{/* End Default List group */}
             </div>
           </div>
         </div></div></section></main>
