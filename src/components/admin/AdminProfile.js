@@ -1,7 +1,7 @@
 import "./dashboard.css"
 
 let Profile = () => {
-    return   <main id="main" className="main" style = {{marginTop:"0px",background:"#fff0ce"}}>
+    return   <main id="main" className="main" style = {{marginTop:"0px",background:"#fff0ce",height:"100vh"}}>
     <section className="section profile">
       <div className="row">
         <div className="col-xl-4">
