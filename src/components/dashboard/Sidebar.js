@@ -1,7 +1,7 @@
 import "./dashboard.css";
 import { Outlet, Link } from "react-router-dom";
 let Sidebar = () => {
-    return  <aside id="sidebar" className="sidebar" style={{background:"#303030"}}>
+    return  <aside id="sidebar" className="sidebar" >
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
           <Link className="nav-link " to="/dashboard">
