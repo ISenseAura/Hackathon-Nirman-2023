@@ -31,24 +31,7 @@ let Profile = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <main id="main" className="main">
-      <div className="pagetitle">
-        <h1>Profile</h1>
-        <nav>
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item">
-              <a href="index.html">Home</a>
-            </li>
-            <li className="breadcrumb-item">Users</li>
-            <li className="breadcrumb-item active">Profile</li>
-          </ol>
-        </nav>
-      </div>
-      {/* End Page Title */}
-=======
     <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce"}}>
->>>>>>> 3bb1311e613ea7882044b6f398a2fd1ad3c65772
       <section className="section profile">
         <div className="row">
           <div className="col-xl-4">
@@ -382,17 +365,11 @@ let Profile = () => {
                             name="twitter"
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Twitter"
-                            defaultValue="https://twitter.com/#"
-=======
                             value={credentials.twitter ? credentials.twitter : user.twitter}
                             onChange={onChange}
                             id="twitter"
-                            name="twitter"
                             style = {{background : "#fff7e4"}}
   
->>>>>>> 3bb1311e613ea7882044b6f398a2fd1ad3c65772
                           />
                         </div>
                       </div>
@@ -405,19 +382,13 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
-                            name="facebook"
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Facebook"
-                            defaultValue="https://facebook.com/#"
-=======
                             value={credentials.facebook ? credentials.facebook : user.facebook}
                             onChange={onChange}
                             id="facebook"
                             name="facebook"
                             style = {{background : "#fff7e4"}}
->>>>>>> 3bb1311e613ea7882044b6f398a2fd1ad3c65772
                           />
                         </div>
                       </div>
@@ -430,19 +401,13 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
-                            name="instagram"
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Instagram"
-                            defaultValue="https://instagram.com/#"
-=======
                             value={credentials.instagram ? credentials.instagram : user.instagram}
                             onChange={onChange}
                             id="instagram"
                             name="instagram"
                             style = {{background : "#fff7e4"}}
->>>>>>> 3bb1311e613ea7882044b6f398a2fd1ad3c65772
                           />
                         </div>
                       </div>
@@ -455,19 +420,13 @@ let Profile = () => {
                         </label>
                         <div className="col-md-8 col-lg-9">
                           <input
-                            name="linkedin"
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Linkedin"
-                            defaultValue="https://linkedin.com/#"
-=======
                             value={credentials.linkedin ? credentials.linkedin : user.linkedin}
                             onChange={onChange}
                             id="linkedin"
                             name="linkedin"
                             style = {{background : "#fff7e4"}}
->>>>>>> 3bb1311e613ea7882044b6f398a2fd1ad3c65772
                           />
                         </div>
                       </div>
