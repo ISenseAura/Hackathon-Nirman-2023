@@ -122,36 +122,24 @@ setCurrentRoom(room2);
 
 
   return (
-    <main id="main" className="main" style={{ marginTop: "0px" }}>
+    <main id="main" className="main" style={{ marginTop: "0px", background:"#fff0ce"}}>
       <section className="section">
         <div className="row">
           <div className="col-lg-3">
             <div className="card">
-              <div className="card-body" >
+              <div className="card-body" style = {{background : "#fff7e4"}}>
                 <h5 className="card-title">
                   Chats{" "}
-                  <span
-                    style={{
-                      float: "right",
-                      borderRadius: "3px",
-                      padding: "3px",
-                      background: "lightgreen",
-                      marginLeft: "0px",
-                    }}
-                  >
-                    {" "}
-                    New Chat
-                  </span>
                 </h5>
                 {/* List group with custom content */}
-                <ul className="list-group list-group-numbered" style={{overflow:"scroll", maxHeight:"80vh"}}>
+                <ul className="list-group list-group-numbered" style={{overflow:"scroll", maxHeight:"60vh"}}>
 
 
                 {rooms.map((room) => {
                 
                   console.log(room)
-                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room)}}>
-                            <div className="ms-2 me-auto">
+                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room)}} style = {{background : "#fff7e4"}}>
+                            <div className="ms-2 me-auto" >
                               <div className="fw-bold">{room.fname + " " + room.lname}</div>
                              <small> from <i><small>{room.cname}</small></i></small>
                             </div>
@@ -170,11 +158,11 @@ setCurrentRoom(room2);
 
           <div className="col-lg-8" style={{ marginRight: "0px" }}>
             <div className="card b-2">
-              <div className="card-body b-2" style={{ width: "100%" }}>
+              <div className="card-body b-2" style={{ width: "100%", background : "#fff7e4" }}>
                 <h5 className="card-title ">
                   <b> {currentRoom.name}</b>
                 </h5>
-                <div id="msgs" className="msg-wrap">
+                <div id="msgs" className="msg-wrap" style = {{background : "#fff7e4"}}>
                 
 
         
@@ -188,6 +176,7 @@ setCurrentRoom(room2);
                     placeholder="Send message "
                     aria-label="Send Message"
                     aria-describedby="basic-addon2"
+                    style = {{background : "#fff7e4"}}
                   />{" "}
                   <span
                     className="input-group-text btn btn-success"

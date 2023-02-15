@@ -12,13 +12,13 @@ let Dashboard = () => {
               {/* Default List group */}
               <a href = '' style = {{background : "#fff7e4"}}>
               <ul className="list-group">
-                <li className="list-group-item"><big>15</big> -  No event</li>
-                <li className="list-group-item"><big>16</big> -  No event</li>
-                <li className="list-group-item"><big>17</big> -  No event</li>
-                <li className="list-group-item"><big>18</big> -  No event</li>
-                <li className="list-group-item"><big>19</big> -  No event</li>
-                <li className="list-group-item"><big>20</big> -  No event</li>
-                <li className="list-group-item"><big>21</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>15</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>16</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>17</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>18</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>19</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>20</big> -  No event</li>
+                <li className="list-group-item" style = {{background : "#fff7e4"}}><big>21</big> -  No event</li>
               </ul></a>{/* End Default List group */}
             </div>
           </div>

@@ -1,7 +1,7 @@
 
 
 let Alumnis = () => {
-    return   <main id="main" class="main">
+    return   <main id="main" class="main" style = {{background:"#fff0ce", height: "91.5vh"}}>
 
     
 
@@ -10,7 +10,7 @@ let Alumnis = () => {
         <div class="col-lg-6"></div>
     
     
-    <div className="card">
+    <div className="card" style = {{background : "#fff7e4"}}>
       <div className="card-body">
         <h5 className="card-title">Tables without borders</h5>
         <p>Add <code>.table-borderless</code> for a table without borders.</p>
