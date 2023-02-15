@@ -50,6 +50,7 @@ about : ""
     if (json) {
       // Save the auth token and redirect
       localStorage.setItem("uid", json.status.user.uid);
+      localStorage.setItem('user', JSON.stringify(json.status.user)); 
       console.log(localStorage.getItem("uid"));
       
       navigate.push("/dashboard");

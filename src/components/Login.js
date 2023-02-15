@@ -23,6 +23,7 @@ let Login = () => {
         if (json.status && json.status.user.uid){
             // Save the auth token and redirect
             localStorage.setItem('uid', json.status.user.uid); 
+            localStorage.setItem('user', JSON.stringify(json.status.user)); 
          console.log(localStorage.getItem("uid"));
          navigate.push("/dashboard");
          
