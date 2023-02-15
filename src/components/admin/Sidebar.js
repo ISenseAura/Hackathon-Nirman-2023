@@ -1,10 +1,11 @@
 import "./dashboard.css";
+import { Outlet, Link } from "react-router-dom";
 
 let Sidebar = () => {
     return  <aside id="sidebar" className="sidebar">
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
-          <a className="nav-link " href="index.html">
+          <a className="nav-link " href="/admin">
             <i className="bi bi-grid" />
             <span>Dashboard</span>
           </a>
@@ -50,10 +51,10 @@ let Sidebar = () => {
         </li>{/* End Charts Nav */}
         <li className="nav-heading">Pages</li>
         <li className="nav-item">
-          <a className="nav-link collapsed" href="users-profile.html">
+        <Link className="nav-link collapsed" to="/AdminProfile">
             <i className="bi bi-person" />
             <span>Profile</span>
-          </a>
+          </Link>
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
           <a className="nav-link collapsed" href="pages-faq.html">

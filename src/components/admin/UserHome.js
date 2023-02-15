@@ -1,6 +1,6 @@
 import Dashboard from "./Dashboard";
 import "./dashboard.css"
-import Profile from "./Profile";
+import Profile from "./AdminProfile";
 import Sidebar from "./Sidebar";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
@@ -40,7 +40,7 @@ function signout() {
     return     <>
       <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="d-flex align-items-center justify-content-between">
-      <a href="index.html" className="d-logo d-flex align-items-center">
+      <a href="/admin" className="d-logo d-flex align-items-center">
         <img src="assets/img/d-logo.png" alt="" />
         <span className="d-none d-lg-block">AGNUS</span>
       </a>
