@@ -4,10 +4,10 @@ let Sidebar = () => {
     return  <aside id="sidebar" className="sidebar">
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
-          <a className="nav-link " href="index.html">
+          <Link className="nav-link " to="/dashboard">
             <i className="bi bi-grid" />
             <span>Dashboard</span>
-          </a>
+          </Link>
         </li>{/* End Dashboard Nav */}
         <li className="nav-item">
           <a className="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
