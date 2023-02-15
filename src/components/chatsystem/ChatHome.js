@@ -108,7 +108,7 @@ function sendMsg() {
 
   function updateRoom(room) {
     console.log("ROom updated");
-    
+    document.getElementById("msgs").innerHTML = "";
     let room2 = {
       email : room.email,
       name : room.fname + " " + room.lname,
@@ -127,7 +127,7 @@ setCurrentRoom(room2);
         <div className="row">
           <div className="col-lg-3">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body" >
                 <h5 className="card-title">
                   Chats{" "}
                   <span
@@ -144,7 +144,7 @@ setCurrentRoom(room2);
                   </span>
                 </h5>
                 {/* List group with custom content */}
-                <ul className="list-group list-group-numbered">
+                <ul className="list-group list-group-numbered" style={{overflow:"scroll", maxHeight:"80vh"}}>
 
 
                 {rooms.map((room) => {
@@ -185,8 +185,8 @@ setCurrentRoom(room2);
                     type="text"
                     value={msg} onChange={onChange} id="msg" name="msg"
                     className="form-control"
-                    placeholder="Recipient's username"
-                    aria-label="Recipient's username"
+                    placeholder="Send message "
+                    aria-label="Send Message"
                     aria-describedby="basic-addon2"
                   />{" "}
                   <span

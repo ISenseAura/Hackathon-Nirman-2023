@@ -31,11 +31,7 @@ let Profile = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce"}}>
-=======
     <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce",height:"100vh"}}>
->>>>>>> d92c09c2344d4342e5754c6014696433e9295753
       <section className="section profile">
         <div className="row">
           <div className="col-xl-4">
@@ -369,16 +365,11 @@ let Profile = () => {
                             name="twitter"
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Twitter"
-                            defaultValue="https://twitter.com/#"
-=======
                             value={credentials.twitter ? credentials.twitter : user.twitter}
                             onChange={onChange}
                             id="twitter"
                             style = {{background : "#fff7e4"}}
   
->>>>>>> d92c09c2344d4342e5754c6014696433e9295753
                           />
                         </div>
                       </div>
@@ -393,16 +384,11 @@ let Profile = () => {
                           <input
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Facebook"
-                            defaultValue="https://facebook.com/#"
-=======
                             value={credentials.facebook ? credentials.facebook : user.facebook}
                             onChange={onChange}
                             id="facebook"
                             name="facebook"
                             style = {{background : "#fff7e4"}}
->>>>>>> d92c09c2344d4342e5754c6014696433e9295753
                           />
                         </div>
                       </div>
@@ -417,16 +403,11 @@ let Profile = () => {
                           <input
                             type="text"
                             className="form-control"
-<<<<<<< HEAD
-                            id="Instagram"
-                            defaultValue="https://instagram.com/#"
-=======
                             value={credentials.instagram ? credentials.instagram : user.instagram}
                             onChange={onChange}
                             id="instagram"
                             name="instagram"
                             style = {{background : "#fff7e4"}}
->>>>>>> d92c09c2344d4342e5754c6014696433e9295753
                           />
                         </div>
                       </div>
