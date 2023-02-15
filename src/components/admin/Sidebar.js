@@ -10,23 +10,14 @@ let Sidebar = () => {
             <span>Dashboard</span>
           </a>
         </li>{/* End Dashboard Nav */}
+
         <li className="nav-item">
-          <a className="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#" style = {{background : "#ffdf94"}}>
-            <i className="bi bi-layout-text-window-reverse" /><span>Tables</span><i className="bi bi-chevron-down ms-auto" />
-          </a>
-          <ul id="tables-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-              <a href="tables-general.js" style = {{background : "#ffdf94"}}>
-                <i className="bi bi-circle" /><span>General Tables</span>
-              </a>
-            </li>
-            <li>
-              <a href="tables-data.html">
-                <i className="bi bi-circle" /><span>Data Tables</span>
-              </a>
-            </li>
-          </ul>
-        </li>{/* End Tables Nav */}
+        <Link className="nav-link collapsed" to="/adminalumnis" style = {{background : "#ffdf94"}}>
+            <i className="bi bi-person" />
+            <span>Alumni Records</span>
+          </Link>
+        </li>{/* End Dashboard Nav */}
+        
         <li className="nav-item">
           <a className="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#" style = {{background : "#ffdf94"}}>
             <i className="bi bi-bar-chart" /><span>Charts</span><i className="bi bi-chevron-down ms-auto" />

@@ -22,6 +22,7 @@ function App() {
             <Route exact path="/profile"><UserHome tab="profile" /></Route>
             <Route exact path="/chats"><UserHome tab="chats" /></Route>
             <Route exact path="/adminchats"><AdminUserHome tab="chats" /></Route>
+            <Route exact path="/adminalumnis"><AdminUserHome tab="alumnis" /></Route>
 
           </Switch>
 </Router>

@@ -6,18 +6,21 @@ import { useHistory } from "react-router-dom";
 let serverAdd = "http://127.0.0.1:8080";
 let Register = () => {
   const navigate = useHistory();
-  const [credentials, setCredentials] = useState({ email: "", password: "" ,fname: "",
-  lname : "",
-  dob : "",
-  cname : "",
-  dep: "",
-  branch : "",
-  state : "",
-  pin : "",
-addr : "",
-yog: "",
-about : ""
-});
+  const [credentials, setCredentials] = useState({
+    email: "",
+    password: "",
+    fname: "",
+    lname: "",
+    dob: "",
+    cname: "",
+    dep: "",
+    branch: "",
+    state: "",
+    pin: "",
+    addr: "",
+    yog: "",
+    about: "",
+  });
   let [next, setNext] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -31,18 +34,16 @@ about : ""
         email: credentials.email,
         password: credentials.password,
         fname: credentials.fname,
-        lname : credentials.lname,
-        dob : credentials.dob,
-        cname : credentials.cname,
+        lname: credentials.lname,
+        dob: credentials.dob,
+        cname: credentials.cname,
         dep: credentials.dep,
-        branch : credentials.branch,
-        yog : credentials.yog,
-        state : credentials.state,
-        pin : credentials.pin,
+        branch: credentials.branch,
+        yog: credentials.yog,
+        state: credentials.state,
+        pin: credentials.pin,
         addr: credentials.addr,
-        about : credentials.about
-
-
+        about: credentials.about,
       }),
     });
     const json = await response.json();
@@ -50,9 +51,9 @@ about : ""
     if (json) {
       // Save the auth token and redirect
       localStorage.setItem("uid", json.status.user.uid);
-      localStorage.setItem('user', JSON.stringify(json.status.user)); 
+      localStorage.setItem("user", JSON.stringify(json.status.user));
       console.log(localStorage.getItem("uid"));
-      
+
       navigate.push("/dashboard");
     } else {
       console.log("Dude!", "Invalid credentials");
@@ -69,9 +70,6 @@ about : ""
   };
 
   return (
-
-
-
     <div className="regBack">
       {!next ? (
         <div className="rcontainer">
@@ -161,15 +159,19 @@ about : ""
               <div className="user-details">
                 <div className="input-box">
                   <span className="details">College Name</span>
-                  <input
+                  <select
                     type="text"
                     value={credentials.cname}
                     onChange={onChange}
                     id="cname"
                     name="cname"
+                    className="form-item"
                     placeholder="Enter your College name"
                     required
-                  />
+                  >
+                    <option>Amity University, Panvel</option>
+                    <option>Bharti Vidyapeeth (DU), Kharghar</option>
+                  </select>
                 </div>
                 <div className="input-box">
                   <span className="details">Department</span>
@@ -185,10 +187,15 @@ about : ""
                 </div>
                 <div className="input-box">
                   <span className="details">Branch</span>
-                  <input type="text"  value={credentials.branch}
+                  <input
+                    type="text"
+                    value={credentials.branch}
                     onChange={onChange}
                     id="branch"
-                    name="branch" placeholder="Enter your Branch" required />
+                    name="branch"
+                    placeholder="Enter your Branch"
+                    required
+                  />
                 </div>
                 <div className="input-box">
                   <span className="details">Year of Graduation</span>
@@ -216,10 +223,15 @@ about : ""
                 </div>
                 <div className="input-box">
                   <span className="details">State</span>
-                  <input type="text"  value={credentials.state}
+                  <input
+                    type="text"
+                    value={credentials.state}
                     onChange={onChange}
                     id="state"
-                    name="state" placeholder="Enter your State" required />
+                    name="state"
+                    placeholder="Enter your State"
+                    required
+                  />
                 </div>
                 <div className="input-box">
                   <span className="details">Pin Code</span>

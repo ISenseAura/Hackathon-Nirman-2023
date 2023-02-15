@@ -92,6 +92,17 @@ function sendMsg() {
     user: JSON.parse(localStorage.getItem("user"))
   }
   socket.emit("send_to",data)
+  document.getElementById("msgs").innerHTML += ` <div className="fromMsg" >
+    <span className="op" style="font-size: 13px; font-weight: 700;">${"You"} </span>
+    <span className="time" style="font-style: italic;font-size: 10px;color:grey;"> 03:00PM</span>
+   
+    <p className="msg" style="padding:7px;border:1px solid black;border-radius: 12px;font-size: 13px;">
+    
+      <span>
+        ${data.msg}
+      </span>
+    </p>
+  </div>`
 }
 
 
