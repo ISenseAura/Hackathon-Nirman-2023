@@ -10,9 +10,9 @@ let Navbar = () => {
         <div
           className="container-fluid container-xl d-flex align-items-center justify-content-between"
           style={{
-            background: "#eeeded",
+            background: "#ffffff",
             borderRadius: "40px",
-            boxShadow: " 2px 5px 10px -2px #2a2a2a",
+            boxShadow: "14px 15px 41px -5px rgba(0,0,0,0.75)",
           }}
         >
           <a href="index.html" className="logo d-flex align-items-center">

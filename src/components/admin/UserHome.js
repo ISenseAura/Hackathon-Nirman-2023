@@ -1,10 +1,11 @@
 import Dashboard from "./Dashboard";
 import "./dashboard.css"
-import Profile from "./Profile";
+import Profile from "./AdminProfile";
 import Sidebar from "./Sidebar";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import getUser from "../../plugins/user"
+import Logo from "../../img/Logo.png";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import ChatHome from "../chatsystem/ChatHome";
 
@@ -38,18 +39,24 @@ function signout() {
 
 
     return     <>
-      <header id="header" className="header fixed-top d-flex align-items-center">
+      <header id="header" className="header fixed-top d-flex align-items-center" style={{background:"#fedf8f"}}>
     <div className="d-flex align-items-center justify-content-between">
-      <a href="index.html" className="d-logo d-flex align-items-center">
+
+      <a href="/admin" className="d-logo d-flex align-items-center">
         <img src="assets/img/d-logo.png" alt="" />
-        <span className="d-none d-lg-block">AGNUS</span>
+        <a href="index.html" className="logo d-flex align-items-right">
+            <img className="d-flex align-items-right logo" src={Logo} />
+          </a>
+          <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
+          <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
       </a>
+
       <i className="bi bi-list toggle-sidebar-btn" />
     </div>{/* End d-logo */}
-    <div className="search-bar">
-      <form className="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
-        <button type="submit" title="Search"><i className="bi bi-search" /></button>
+    <div className="search-bar" style = {{background : "#fff7e4"}}>
+      <form className="search-form d-flex align-items-center" method="POST" action="#" style = {{background : "#fff7e4"}}>
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword" style = {{background : "#fff7e4"}}/>
+        <button type="submit" title="Search"><i className="bi bi-search" style = {{background : "#fff7e4"}}/></button>
       </form>
     </div>{/* End Search Bar */}
     <nav className="header-nav ms-auto">
