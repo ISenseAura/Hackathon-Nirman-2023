@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import getUser from "../../plugins/user"
+import ChatHome from "../chatsystem/ChatHome";
 
 let UserHome = (props) => {
   const navigate = useHistory();
@@ -227,7 +228,7 @@ function signout() {
 
   <Sidebar/>
   {
-  props.tab === "profile" ? <Profile/> : (props.tab === "dashboard" ? <Dashboard/> : "")
+  props.tab === "profile" ? <Profile/> : (props.tab === "dashboard" ? <Dashboard/> : (props.tab === "chats" ? <ChatHome/> : ""))
 }
   
   </>

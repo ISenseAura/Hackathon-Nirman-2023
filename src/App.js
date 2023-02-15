@@ -7,6 +7,7 @@ import AdminUserHome from "./components/admin/UserHome";
 import UserHome from "./components/dashboard/UserHome";
 import Home from "./components/Home"
 import C from "./components/c"
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             <Route exact path="/dashboard"><UserHome tab="dashboard"/></Route>
             <Route exact path="/admin"><AdminUserHome tab="dashboard"/></Route>
             <Route exact path="/adminprofile"><AdminUserHome tab="profile" /></Route>
+            <Route exact path="/profile"><UserHome tab="profile" /></Route>
+            <Route exact path="/chats"><UserHome tab="chats" /></Route>
 
           </Switch>
 </Router>

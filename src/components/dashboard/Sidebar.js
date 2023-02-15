@@ -1,7 +1,7 @@
 import "./dashboard.css";
 import { Outlet, Link } from "react-router-dom";
 let Sidebar = () => {
-    return  <aside id="sidebar" className="sidebar">
+    return  <aside id="sidebar" className="sidebar" style={{background:"#303030"}}>
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
           <Link className="nav-link " to="/dashboard">
@@ -9,110 +9,7 @@ let Sidebar = () => {
             <span>Dashboard</span>
           </Link>
         </li>{/* End Dashboard Nav */}
-        <li className="nav-item">
-          <a className="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i className="bi bi-menu-button-wide" /><span>Components</span><i className="bi bi-chevron-down ms-auto" />
-          </a>
-          <ul id="components-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-              <a href="components-alerts.html">
-                <i className="bi bi-circle" /><span>Alerts</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-accordion.html">
-                <i className="bi bi-circle" /><span>Accordion</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-badges.html">
-                <i className="bi bi-circle" /><span>Badges</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-breadcrumbs.html">
-                <i className="bi bi-circle" /><span>Breadcrumbs</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-buttons.html">
-                <i className="bi bi-circle" /><span>Buttons</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-cards.html">
-                <i className="bi bi-circle" /><span>Cards</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-carousel.html">
-                <i className="bi bi-circle" /><span>Carousel</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-list-group.html">
-                <i className="bi bi-circle" /><span>List group</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-modal.html">
-                <i className="bi bi-circle" /><span>Modal</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-tabs.html">
-                <i className="bi bi-circle" /><span>Tabs</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-pagination.html">
-                <i className="bi bi-circle" /><span>Pagination</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-progress.html">
-                <i className="bi bi-circle" /><span>Progress</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-spinners.html">
-                <i className="bi bi-circle" /><span>Spinners</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-tooltips.html">
-                <i className="bi bi-circle" /><span>Tooltips</span>
-              </a>
-            </li>
-          </ul>
-        </li>{/* End Components Nav */}
-        <li className="nav-item">
-          <a className="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-            <i className="bi bi-journal-text" /><span>Forms</span><i className="bi bi-chevron-down ms-auto" />
-          </a>
-          <ul id="forms-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-              <a href="forms-elements.html">
-                <i className="bi bi-circle" /><span>Form Elements</span>
-              </a>
-            </li>
-            <li>
-              <a href="forms-layouts.html">
-                <i className="bi bi-circle" /><span>Form Layouts</span>
-              </a>
-            </li>
-            <li>
-              <a href="forms-editors.html">
-                <i className="bi bi-circle" /><span>Form Editors</span>
-              </a>
-            </li>
-            <li>
-              <a href="forms-validation.html">
-                <i className="bi bi-circle" /><span>Form Validation</span>
-              </a>
-            </li>
-          </ul>
-        </li>{/* End Forms Nav */}
+     
         <li className="nav-item">
           <a className="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
             <i className="bi bi-layout-text-window-reverse" /><span>Tables</span><i className="bi bi-chevron-down ms-auto" />
@@ -182,10 +79,10 @@ let Sidebar = () => {
           </Link>
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-faq.html">
+          <Link className="nav-link collapsed" to="/chats">
             <i className="bi bi-question-circle" />
-            <span>F.A.Q</span>
-          </a>
+            <span>Chats</span>
+          </Link>
         </li>{/* End F.A.Q Page Nav */}
         <li className="nav-item">
           <a className="nav-link collapsed" href="pages-contact.html">
