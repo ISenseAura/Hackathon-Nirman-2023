@@ -48,10 +48,10 @@ let Sidebar = () => {
           </Link>
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="pages-faq.html" style = {{background : "#ffdf94"}}>
+          <Link className="nav-link collapsed" to="pages-faq.html" style = {{background : "#ffdf94"}}>
             <i className="bi bi-question-circle" />
-            <span>F.A.Q</span>
-          </a>
+            <span>Chats</span>
+          </Link>
         </li>{/* End F.A.Q Page Nav */}
         <li className="nav-item">
           <a className="nav-link collapsed" href="pages-contact.html" style = {{background : "#ffdf94"}}>
