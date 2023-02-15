@@ -1,5 +1,5 @@
 import "./dashboard.css";
-
+import { Outlet, Link } from "react-router-dom";
 let Sidebar = () => {
     return  <aside id="sidebar" className="sidebar">
       <ul className="sidebar-nav" id="sidebar-nav">
@@ -176,10 +176,10 @@ let Sidebar = () => {
         </li>{/* End Icons Nav */}
         <li className="nav-heading">Pages</li>
         <li className="nav-item">
-          <a className="nav-link collapsed" href="users-profile.html">
+          <Link className="nav-link collapsed" href="/profile">
             <i className="bi bi-person" />
             <span>Profile</span>
-          </a>
+          </Link>
         </li>{/* End Profile Page Nav */}
         <li className="nav-item">
           <a className="nav-link collapsed" href="pages-faq.html">

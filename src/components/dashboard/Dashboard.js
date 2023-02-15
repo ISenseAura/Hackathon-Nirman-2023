@@ -2,16 +2,7 @@ import './dashboard.css'
 
 let Dashboard = () => {
     return    <main id="main" className="main">
-    <div className="pagetitle">
-      <h1>List Group</h1>
-      <nav>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li className="breadcrumb-item">Components</li>
-          <li className="breadcrumb-item active">List Group</li>
-        </ol>
-      </nav>
-    </div>{/* End Page Title */}
+  
     <section className="section">
       <div className="row">
         <div className="col-lg-6">

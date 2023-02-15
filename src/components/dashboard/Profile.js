@@ -1,6 +1,19 @@
 import "./dashboard.css"
 
+import getUser from "../../plugins/user"
+import { useState } from "react";
 let Profile = () => {
+
+  let [user, setUser] = useState(false);
+if(!user) {
+  getUser().then((data) => {
+  
+    setUser(data)
+  })
+}
+
+
+
     return   <main id="main" className="main">
     <div className="pagetitle">
       <h1>Profile</h1>
@@ -18,7 +31,7 @@ let Profile = () => {
           <div className="card">
             <div className="card-body profile-card pt-4 d-flex flex-column align-items-center">
               <img src="assets/img/profile-img.jpg" alt="Profile" className="rounded-circle" />
-              <h2>Kevin Anderson</h2>
+              <h2>{user.fname + " " + user.lname}</h2>
               <h3>Web Designer</h3>
               <div className="social-links mt-2">
                 <a href="#" className="twitter"><i className="bi bi-twitter" /></a>
@@ -54,23 +67,23 @@ let Profile = () => {
                   <h5 className="card-title">Profile Details</h5>
                   <div className="row">
                     <div className="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div className="col-lg-9 col-md-8">Kevin Anderson</div>
+                    <div className="col-lg-9 col-md-8">{user.fname + " " + user.lname}</div>
                   </div>
                   <div className="row">
-                    <div className="col-lg-3 col-md-4 label">Company</div>
-                    <div className="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
+                    <div className="col-lg-3 col-md-4 label">College</div>
+                    <div className="col-lg-9 col-md-8">{user.cname}</div>
                   </div>
                   <div className="row">
-                    <div className="col-lg-3 col-md-4 label">Job</div>
-                    <div className="col-lg-9 col-md-8">Web Designer</div>
+                    <div className="col-lg-3 col-md-4 label">Year Of Graduation</div>
+                    <div className="col-lg-9 col-md-8">{user.yog}</div>
                   </div>
                   <div className="row">
-                    <div className="col-lg-3 col-md-4 label">Country</div>
-                    <div className="col-lg-9 col-md-8">USA</div>
+                    <div className="col-lg-3 col-md-4 label">State</div>
+                    <div className="col-lg-9 col-md-8">{user.state}</div>
                   </div>
                   <div className="row">
                     <div className="col-lg-3 col-md-4 label">Address</div>
-                    <div className="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                    <div className="col-lg-9 col-md-8">{user.addr}</div>
                   </div>
                   <div className="row">
                     <div className="col-lg-3 col-md-4 label">Phone</div>
@@ -78,7 +91,7 @@ let Profile = () => {
                   </div>
                   <div className="row">
                     <div className="col-lg-3 col-md-4 label">Email</div>
-                    <div className="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    <div className="col-lg-9 col-md-8">{user.email}</div>
                   </div>
                 </div>
                 <div className="tab-pane fade profile-edit pt-3" id="profile-edit">

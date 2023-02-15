@@ -1,12 +1,13 @@
 import "./Login.css"
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 let serverAdd = "http://127.0.0.1:8080";
 
 
 let Login = () => {
 
-
+    const navigate = useHistory();
     const [credentials, setCredentials] = useState({email: "", password: ""}) 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,10 +20,11 @@ let Login = () => {
         });
         const json = await response.json()
         console.log(json);
-        if (json.status == 200){
+        if (json.status && json.status.user.uid){
             // Save the auth token and redirect
-            localStorage.setItem('uid', json.status.uid); 
+            localStorage.setItem('uid', json.status.user.uid); 
          console.log(localStorage.getItem("uid"));
+         navigate.push("/dashboard");
          
 
         }

@@ -1,17 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Footer from './components/Footer';
-import Features from './components/Features';
-import Cards from './components/Cards';
-import Register from './components/Register';
-import Chat from './components/Chat';
-import UserHome from './components/dashboard/UserHome';
+import Register from "./components/Register";
+import UserHome from "./components/dashboard/UserHome";
+import Home from "./components/Home"
 
 function App() {
   return (
@@ -21,15 +13,10 @@ function App() {
             <Route exact path="/"><Home /></Route>
             <Route exact path="/register"><Register /></Route>
             <Route exact path="/dashboard"><UserHome /></Route>
+            <Route exact path="/profile"><UserHome /></Route>
 
           </Switch>
 </Router>
-
-
-
-
-
-
 
 
   
