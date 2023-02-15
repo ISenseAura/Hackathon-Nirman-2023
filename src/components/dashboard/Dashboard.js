@@ -1,7 +1,7 @@
 import './dashboard.css'
 
 let Dashboard = () => {
-    return    <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce"}}>
+    return    <main id="main" className="main" style={{marginTop:"0px", background:"#fff0ce",height:"100vh"}}>
   
     <section className="section" >
       <div className="row">

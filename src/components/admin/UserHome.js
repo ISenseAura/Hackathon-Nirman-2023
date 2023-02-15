@@ -55,7 +55,7 @@ function signout() {
     </div>{/* End d-logo */}
     <div className="search-bar" style = {{background : "#fff7e4"}}>
       <form className="search-form d-flex align-items-center" method="POST" action="#" style = {{background : "#fff7e4"}}>
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword" style = {{background : "#fff7e4"}}/>
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword" style = {{background : "#fff7e4",marginLeft:"-20px",marginRight:"-7px",width:"400px"}}/>
         <button type="submit" title="Search"><i className="bi bi-search" style = {{background : "#fff7e4"}}/></button>
       </form>
     </div>{/* End Search Bar */}
