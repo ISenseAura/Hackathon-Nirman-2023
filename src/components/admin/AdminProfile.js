@@ -1,17 +1,7 @@
 import "./dashboard.css"
 
 let Profile = () => {
-    return   <main id="main" className="main">
-    <div className="pagetitle">
-      <h1>Profile</h1>
-      <nav>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item"><a href="dashboard">Home</a></li>
-          <li className="breadcrumb-item">Users</li>
-          <li className="breadcrumb-item active">Profile</li>
-        </ol>
-      </nav>
-    </div>{/* End Page Title */}
+    return   <main id="main" className="main" style = {{marginTop:"0px"}}>
     <section className="section profile">
       <div className="row">
         <div className="col-xl-4">
