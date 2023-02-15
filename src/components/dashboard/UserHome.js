@@ -2,6 +2,7 @@ import Dashboard from "./Dashboard";
 import "./dashboard.css"
 import Profile from "./Profile";
 import Sidebar from "./Sidebar";
+import Logo from "../../img/Logo.png"
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import getUser from "../../plugins/user"
@@ -38,7 +39,14 @@ function signout() {
     <div className="d-flex align-items-center justify-content-between">
       <a href="index.html" className="d-logo d-flex align-items-center">
         <img src="assets/img/d-logo.png" alt="" />
-        <span className="d-none d-lg-block">AGNUS</span>
+        <a href="/admin" className="d-logo d-flex align-items-center">
+        <img src="assets/img/d-logo.png" alt="" />
+        <a href="index.html" className="logo d-flex align-items-right">
+            <img className="d-flex align-items-right logo" src={Logo} />
+          </a>
+          <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
+          <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
+      </a>
       </a>
       <i className="bi bi-list toggle-sidebar-btn" />
     </div>{/* End d-logo */}

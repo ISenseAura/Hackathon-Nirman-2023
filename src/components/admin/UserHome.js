@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import getUser from "../../plugins/user"
+import Logo from "../../img/Logo.png";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import ChatHome from "../chatsystem/ChatHome";
 
@@ -40,10 +41,16 @@ function signout() {
     return     <>
       <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="d-flex align-items-center justify-content-between">
+
       <a href="/admin" className="d-logo d-flex align-items-center">
         <img src="assets/img/d-logo.png" alt="" />
-        <span className="d-none d-lg-block">AGNUS</span>
+        <a href="index.html" className="logo d-flex align-items-right">
+            <img className="d-flex align-items-right logo" src={Logo} />
+          </a>
+          <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
+          <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
       </a>
+
       <i className="bi bi-list toggle-sidebar-btn" />
     </div>{/* End d-logo */}
     <div className="search-bar">
