@@ -53,10 +53,10 @@ function signout() {
 
       <i className="bi bi-list toggle-sidebar-btn" />
     </div>{/* End d-logo */}
-    <div className="search-bar">
-      <form className="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
-        <button type="submit" title="Search"><i className="bi bi-search" /></button>
+    <div className="search-bar" style = {{background : "#fff7e4"}}>
+      <form className="search-form d-flex align-items-center" method="POST" action="#" style = {{background : "#fff7e4"}}>
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword" style = {{background : "#fff7e4"}}/>
+        <button type="submit" title="Search"><i className="bi bi-search" style = {{background : "#fff7e4"}}/></button>
       </form>
     </div>{/* End Search Bar */}
     <nav className="header-nav ms-auto">

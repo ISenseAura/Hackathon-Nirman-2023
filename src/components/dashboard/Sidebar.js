@@ -1,7 +1,7 @@
 import "./dashboard.css";
 import { Outlet, Link } from "react-router-dom";
 let Sidebar = () => {
-    return  <aside id="sidebar" className="sidebar" style = {{background : "#ffdf94"}} >
+    return  <aside id="sidebar" className="sidebar" style = {{background : "#ecb831"}} >
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
           <Link className="nav-link " to="/dashboard" style = {{background : "#ffdf94"}}  >
@@ -16,12 +16,12 @@ let Sidebar = () => {
           </a>
           <ul id="tables-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="tables-general.html">
+              <a href="tables-general.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>General Tables</span>
               </a>
             </li>
             <li>
-              <a href="tables-data.html">
+              <a href="tables-data.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>Data Tables</span>
               </a>
             </li>
@@ -33,17 +33,17 @@ let Sidebar = () => {
           </a>
           <ul id="charts-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="charts-chartjs.html">
+              <a href="charts-chartjs.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>Chart.js</span>
               </a>
             </li>
             <li>
-              <a href="charts-apexcharts.html">
+              <a href="charts-apexcharts.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>ApexCharts</span>
               </a>
             </li>
             <li>
-              <a href="charts-echarts.html">
+              <a href="charts-echarts.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>ECharts</span>
               </a>
             </li>
@@ -55,17 +55,17 @@ let Sidebar = () => {
           </a>
           <ul id="icons-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="icons-bootstrap.html">
+              <a href="icons-bootstrap.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>Bootstrap Icons</span>
               </a>
             </li>
             <li>
-              <a href="icons-remix.html">
+              <a href="icons-remix.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>Remix Icons</span>
               </a>
             </li>
             <li>
-              <a href="icons-boxicons.html">
+              <a href="icons-boxicons.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>Boxicons</span>
               </a>
             </li>
