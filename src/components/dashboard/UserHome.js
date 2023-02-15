@@ -1,3 +1,4 @@
+import Dashboard from "./Dashboard";
 import "./dashboard.css"
 import Profile from "./Profile";
 import Sidebar from "./Sidebar";
@@ -6,12 +7,12 @@ let UserHome = () => {
     return     <>
       <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="d-flex align-items-center justify-content-between">
-      <a href="index.html" className="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="" />
+      <a href="index.html" className="d-logo d-flex align-items-center">
+        <img src="assets/img/d-logo.png" alt="" />
         <span className="d-none d-lg-block">AGNUS</span>
       </a>
       <i className="bi bi-list toggle-sidebar-btn" />
-    </div>{/* End Logo */}
+    </div>{/* End d-logo */}
     <div className="search-bar">
       <form className="search-form d-flex align-items-center" method="POST" action="#">
         <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
@@ -196,7 +197,7 @@ let UserHome = () => {
     </nav>{/* End Icons Navigation */}
   </header>
   <Sidebar/>
-  <Profile/>
+  <Dashboard/>
   </>
 }
 

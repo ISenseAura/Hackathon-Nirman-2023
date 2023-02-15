@@ -19,12 +19,8 @@ let Navbar = () => {
               <li><a href="about.html">About</a></li>
           
               <li><a href="team.html">Team</a></li>
-<<<<<<< HEAD
          
          
-=======
-              <li><a href="blog.html">Blog</a></li>
->>>>>>> 4d53b0413339c14bc34da12637720fead14234ae
               <li><a href="contact.html">Contact</a></li>
               <li ><Link to="/reg" >Register</Link></li>
             </ul>

@@ -6,7 +6,9 @@ import Features from './Features';
 import Cards from './Cards';
 import "./Home.css";
 
+import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
+import Login from "./Login";
 
 let Home = () => {
   let [active, setActive] = useState(false);
@@ -39,9 +41,9 @@ let Home = () => {
                 </p>
               </blockquote>
               <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="#about" class="btn-get-started" onClick={OnGetStarted}>
-                  Get Started
-                </a>
+                <Link to="/register" class="btn-get-started" onClick={OnGetStarted}>
+                Join Us
+                </Link>
                 <a
                   href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                   class="glightbox btn-watch-video d-flex align-items-center"
@@ -58,7 +60,9 @@ let Home = () => {
           
         </div>
 
+
     
+ <Login/>
       </section> : <section id="hero" class={`hero d-flex align-items-center  ${active ? "active" : ""}`}>
        
 
@@ -91,14 +95,16 @@ let Home = () => {
 
 
 
-          
+          <Login/>
         </div>
       </section>
 }
 
+
 <Navbar/>
  <About/>
  <Features/>
+ 
  <br/>
  <Footer/>
     </>
