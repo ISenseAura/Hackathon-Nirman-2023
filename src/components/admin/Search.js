@@ -42,14 +42,14 @@ let Search = () => {
 
   
 
-    return   <main id="main" className="main">
+    return   <main id="main" className="main" style = {{background:"#fff0ce"}}>
    <section class="section">
       <div class="row">
         <div class="col-lg-6"></div>
     
     
     <div className="card">
-      <div className="card-body">
+      <div className="card-body" style = {{background : "#fff7e4"}}>
         <h5 className="card-title">Search results for {id} </h5>
       
         <table className="table table-borderless">
