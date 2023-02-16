@@ -2,6 +2,9 @@ import "./dashboard.css";
 
 import getUser from "../../plugins/user";
 import { useState } from "react";
+
+
+let serverAdd = "http://127.0.0.1:8080";
 let Profile = () => {
   let [user, setUser] = useState(false);
   if (!user) {
@@ -9,6 +12,7 @@ let Profile = () => {
       setUser(data);
     });
   }
+  console.log(user);
   const [credentials, setCredentials] = useState({
     email: user.email,
     password: user.password,
@@ -25,6 +29,37 @@ let Profile = () => {
     about: user.about,
   });
   
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch(serverAdd + "/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: credentials.email,
+        password: credentials.password,
+        fname: credentials.fname,
+        lname: credentials.lname,
+        dob: credentials.dob,
+        cname: credentials.cname,
+        dep: credentials.dep,
+        branch: credentials.branch,
+        yog: credentials.yog,
+        state: credentials.state,
+        pin: credentials.pin,
+        addr: credentials.addr,
+        about: credentials.about,
+      }),
+    });
+    const json = await response.json();
+    console.log(json);
+    if (json) {
+    } else {
+      console.log("ERRORRR");
+    }
+  }
+
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -155,7 +190,7 @@ let Profile = () => {
                     id="profile-edit"
                   >
                     {/* Profile Edit Form */}
-                    <form>
+                    <form onSubmit={handleSubmit}>
                       <div className="row mb-3">
                         <label
                           htmlFor="profileImage"
