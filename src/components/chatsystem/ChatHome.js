@@ -134,25 +134,6 @@ let ChatHome = (props) => {
                   </span>
                 </h5>
                 {/* List group with custom content */}
-<<<<<<< HEAD
-                <ul className="list-group list-group-numbered" style={{overflow:"scroll", maxHeight:"60vh"}}>
-
-
-                {rooms.map((room) => {
-                
-                  console.log(room)
-                            return <li className="list-group-item d-flex justify-content-between align-items-start" onClick={() => { updateRoom(room)}} style = {{background : "#fff7e4"}}>
-                            <div className="ms-2 me-auto" >
-                              <div className="fw-bold">{room.fname + " " + room.lname}</div>
-                             <small> from <i><small>{room.cname}</small></i></small>
-                            </div>
-                          </li>
-                        })}
-
-
-
-        
-=======
                 <ul
                   className="list-group list-group-numbered"
                   style={{ overflow: "scroll", maxHeight: "80vh" }}
@@ -184,7 +165,6 @@ let ChatHome = (props) => {
                       </li>
                     );
                   })}
->>>>>>> 547206458b1d5bf5ee0a5c384138dfd9f9c23d48
                 </ul>
                 {/* End with custom content */}
               </div>
