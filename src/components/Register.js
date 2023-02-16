@@ -25,6 +25,9 @@ let Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    let cname = document.getElementById("cname").value;
+
     const response = await fetch(serverAdd + "/signup", {
       method: "POST",
       headers: {
@@ -36,7 +39,7 @@ let Register = () => {
         fname: credentials.fname,
         lname: credentials.lname,
         dob: credentials.dob,
-        cname: credentials.cname,
+        cname: cname,
         dep: credentials.dep,
         branch: credentials.branch,
         yog: credentials.yog,
@@ -161,7 +164,7 @@ let Register = () => {
                   <span className="details">College Name</span>
                   <select
                     type="text"
-                    value={credentials.cname}
+                    
                     onChange={onChange}
                     id="cname"
                     name="cname"
@@ -169,8 +172,8 @@ let Register = () => {
                     placeholder="Enter your College name"
                     required
                   >
-                    <option>Amity University, Panvel</option>
-                    <option>Bharti Vidyapeeth (DU), Kharghar</option>
+                    <option value={"Amity University, Panvel"}>Amity University, Panvel</option>
+                    <option value={"Bharti Vidyapeeth (DU), Kharghar"}>Bharti Vidyapeeth (DU), Kharghar</option>
                   </select>
                 </div>
                 <div className="input-box">

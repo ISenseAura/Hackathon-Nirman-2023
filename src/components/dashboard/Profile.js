@@ -277,26 +277,7 @@ let Profile = () => {
                           />
                         </div>
                       </div>
-                      <div className="row mb-3">
-                        <label
-                          htmlFor="company"
-                          className="col-md-4 col-lg-3 col-form-label"
-                        >
-                          College
-                        </label>
-                        <div className="col-md-8 col-lg-9">
-                          <input
-                             value={credentials.cname ? credentials.cname : user.cname}
-                             onChange={onChange}
-                             id="cname"
-                             name="cname"
-                            className="form-control"
-                            style = {{background : "#fff7e4"}}
-                            
-                          
-                          />
-                        </div>
-                      </div>
+                    
                       <div className="row mb-3">
                         <label
                           htmlFor="Job"

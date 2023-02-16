@@ -2,7 +2,7 @@
 import { Outlet, Link } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import "./dashboard.css";
-import Profile from "./AdminProfile";
+import Profile from "./Profile";
 import Sidebar from "./Sidebar";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
