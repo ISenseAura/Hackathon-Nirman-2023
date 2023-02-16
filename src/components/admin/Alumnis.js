@@ -72,12 +72,12 @@ let Alumnis = () => {
   //console.log("ssssss" + JSON.stringify(params))
 
   return (
-    <main id="main" className="main">
+    <main id="main" className="main" style = {{background:"#fff0ce", minHeight:"91.5vh"}}>
       <section class="section">
         <div class="row">
           <div class="col-lg-6"></div>
 
-          <div className="card">
+          <div className="card" style = {{background : "#fff7e4"}}>
             <div className="card-body">
               <h5 className="card-title">Alumnis at {cname} </h5>
 
