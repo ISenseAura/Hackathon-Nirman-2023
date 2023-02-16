@@ -112,36 +112,24 @@ let ChatHome = (props) => {
   };
 
   return (
-    <main id="main" className="main" style={{ marginTop: "0px" }}>
+    <main id="main" className="main" style={{ marginTop: "0px", background:"#fff0ce" }}>
       <section className="section">
         <div className="row">
           <div className="col-lg-3">
-            <div className="card">
-              <div className="card-body">
+            <div className="card" >
+              <div className="card-body" style = {{background:"#fff7e4"}}>
                 <h5 className="card-title">
                   Chats{" "}
-                  <span
-                    style={{
-                      float: "right",
-                      borderRadius: "3px",
-                      padding: "3px",
-                      background: "lightgreen",
-                      marginLeft: "0px",
-                    }}
-                  >
-                    {" "}
-                    New Chat
-                  </span>
                 </h5>
                 {/* List group with custom content */}
                 <ul
                   className="list-group list-group-numbered"
-                  style={{ overflow: "scroll", maxHeight: "80vh" }}
+                  style={{ overflow: "scroll", maxHeight: "60vh"}}
                 >
                   {rooms.map((room) => {
                     console.log(room);
                     return (
-                      <li
+                      <li style = {{background:"#fff7e4"}}
                         className="list-group-item d-flex justify-content-between align-items-start"
                         onClick={() => {
                           updateRoom(room);
@@ -159,9 +147,6 @@ let ChatHome = (props) => {
                             </i>
                           </small>
                         </div>
-                        <span className="badge bg-primary rounded-pill">
-                          14
-                        </span>
                       </li>
                     );
                   })}
@@ -172,7 +157,7 @@ let ChatHome = (props) => {
           </div>
 
           <div className="col-lg-8" style={{ marginRight: "0px" }}>
-            <div className="card b-2">
+            <div className="card b-2" style = {{background:"#fff7e4"}}>
               <div className="card-body b-2" style={{ width: "100%" }}>
                 <h5 className="card-title ">
                   <b> {currentRoom.name}</b>
@@ -190,6 +175,7 @@ let ChatHome = (props) => {
                     placeholder="Send message "
                     aria-label="Send Message"
                     aria-describedby="basic-addon2"
+                    style = {{background:"#fff7e4"}}
                   />{" "}
                   <span
                     className="input-group-text btn btn-success"
