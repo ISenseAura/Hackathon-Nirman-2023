@@ -42,7 +42,7 @@ let Search = () => {
 
   
 
-    return   <main id="main" className="main" style = {{background:"#fff0ce"}}>
+    return   <main id="main" className="main" style = {{background:"#fff0ce",minHeight:"91.5vh"}}>
    <section class="section">
       <div class="row">
         <div class="col-lg-6"></div>
