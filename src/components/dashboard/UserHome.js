@@ -33,7 +33,7 @@ let UserHome = (props) => {
   }
 
   let [user, setUser] = useState(false);
-  let [search, setSearch] = useState(false);
+  let [search, setSearch] = useState("");
 
   if (!user) {
     getUser().then((data) => {
