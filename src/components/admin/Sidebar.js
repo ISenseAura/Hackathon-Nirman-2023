@@ -2,7 +2,7 @@ import "./dashboard.css";
 import { Outlet, Link } from "react-router-dom";
 
 let Sidebar = () => {
-    return  <aside id="sidebar" className="sidebar" style = {{background : "#ffdf94"}}>
+    return  <aside id="sidebar" className="sidebar" style = {{background : "#ecb831"}}>
       <ul className="sidebar-nav" id="sidebar-nav">
         <li className="nav-item">
           <a className="nav-link " href="/admin" style = {{background : "#ffdf94"}}>
@@ -24,17 +24,17 @@ let Sidebar = () => {
           </a>
           <ul id="charts-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="charts-chartjs.html">
+              <a href="charts-chartjs.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>Chart.js</span>
               </a>
             </li>
             <li>
-              <a href="charts-apexcharts.html">
+              <a href="charts-apexcharts.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>ApexCharts</span>
               </a>
             </li>
             <li>
-              <a href="charts-echarts.html">
+              <a href="charts-echarts.html" style = {{background : "#ffdf94"}}>
                 <i className="bi bi-circle" /><span>ECharts</span>
               </a>
             </li>
