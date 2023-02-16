@@ -11,6 +11,7 @@ import Logo from "../../img/Logo.png";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import ChatHome from "../chatsystem/ChatHome";
 import Alumnis from "./Alumnis";
+import Search from "./Search";
 
 let UserHome = (props) => {
   const navigate = useHistory();
@@ -23,6 +24,14 @@ let UserHome = (props) => {
 
   let [user, setUser] = useState(false);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    navigate.push("/adminsearch/" + search);
+
+  }
+  let [search, setSearch] = useState("");
+
+
   if (!user) {
     getUser().then((data) => {
       setUser(data);
@@ -33,6 +42,9 @@ let UserHome = (props) => {
   function processFurther(user) {
     if (!user.isCollegeAdmin) navigate.push("/dashboard");
   }
+  const onChange = (e)=>{
+    setSearch(e.target.value)
+}
 
   return (
     <>
@@ -57,19 +69,19 @@ let UserHome = (props) => {
         <div className="search-bar">
           <form
             className="search-form d-flex align-items-center"
-            method="POST"
-            action="#"
+            onSubmit={handleSubmit}
             style={{ background: "#fff7e4" }}
           >
             <input
               type="text"
-              name="query"
-              placeholder="Search"
+              value={search}
+              onChange={onChange}
+              placeholder="Find Connections"
               title="Enter search keyword"
-              style={{ background: "#fff7e4" }}
+              style = {{background : "#fff7e4"}}
             />
-            <button type="submit" title="Search">
-              <i className="bi bi-search" style={{ background: "#fff7e4" }} />
+            <button title="Search" >
+              <i className="bi bi-search" />
             </button>
           </form>
         </div>
@@ -320,6 +332,8 @@ let UserHome = (props) => {
         <ChatHome />
       ) : props.tab === "alumnis" ? (
         <Alumnis />
+      )  : props.tab === "search" ? (
+        <Search />
       ) : (
         ""
       )}

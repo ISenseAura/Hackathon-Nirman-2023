@@ -24,6 +24,7 @@ function App() {
             <Route exact path="/chats"><UserHome tab="chats" /></Route>
 
             <Route exact path="/search/:id"><UserHome tab="search" /></Route>
+            <Route exact path="/adminsearch/:id"><AdminUserHome tab="search" /></Route>
 
             <Route exact path="/adminchats"><AdminUserHome tab="chats" /></Route>
             <Route exact path="/adminalumnis"><AdminUserHome tab="alumnis" /></Route>
