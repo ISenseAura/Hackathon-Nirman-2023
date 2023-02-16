@@ -143,7 +143,6 @@ setCurrentRoom(room2);
                               <div className="fw-bold">{room.fname + " " + room.lname}</div>
                              <small> from <i><small>{room.cname}</small></i></small>
                             </div>
-                            <span className="badge bg-primary rounded-pill">14</span>
                           </li>
                         })}
 
