@@ -31,7 +31,7 @@ let Profile = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(serverAdd + "/signup", {
+    const response = await fetch(serverAdd + "/update", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ let Profile = () => {
                   className="rounded-circle"
                 />
                 <h2>{user.fname + " " + user.lname}</h2>
-                <h3>Web Designer</h3>
+                <h3></h3>
                 <div className="social-links mt-2">
                   <a href="#" className="twitter">
                     <i className="bi bi-twitter" />

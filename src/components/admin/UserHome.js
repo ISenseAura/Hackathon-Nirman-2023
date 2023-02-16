@@ -275,7 +275,7 @@ let UserHome = (props) => {
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                 <li className="dropdown-header">
                   <h6>{user.fname + " " + user.lname}</h6>
-                  <span>Web Designer</span>
+                  <span></span>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />

@@ -31,7 +31,7 @@ let Profile = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(serverAdd + "/signup", {
+    const response = await fetch(serverAdd + "/updateuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,11 +50,13 @@ let Profile = () => {
         pin: credentials.pin,
         addr: credentials.addr,
         about: credentials.about,
+        uid: localStorage.getItem("uid").trim()
       }),
     });
     const json = await response.json();
     console.log(json);
     if (json) {
+      window.location.reload(true)
     } else {
       console.log("ERRORRR");
     }
@@ -150,22 +152,12 @@ let Profile = () => {
                     <h5 className="card-title">About</h5>
                     <p className="small fst-italic">{user.about}</p>
                     <h5 className="card-title">Profile Details</h5>
+                    
                     <div className="row">
-                      <div className="col-lg-3 col-md-4 label ">Full Name</div>
-                      <div className="col-lg-9 col-md-8">
-                        {user.fname + " " + user.lname}
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-3 col-md-4 label">College</div>
+                      <div className="col-lg-3 col-md-4 label">College Name</div>
                       <div className="col-lg-9 col-md-8">{user.cname}</div>
                     </div>
-                    <div className="row">
-                      <div className="col-lg-3 col-md-4 label">
-                        Year Of Graduation
-                      </div>
-                      <div className="col-lg-9 col-md-8">{user.yog}</div>
-                    </div>
+                
                     <div className="row">
                       <div className="col-lg-3 col-md-4 label">State</div>
                       <div className="col-lg-9 col-md-8">{user.state}</div>
@@ -278,25 +270,7 @@ let Profile = () => {
                         </div>
                       </div>
                  
-                      <div className="row mb-3">
-                        <label
-                          htmlFor="Job"
-                          className="col-md-4 col-lg-3 col-form-label"
-                        >
-                          Year Of Graduation
-                        </label>
-                        <div className="col-md-8 col-lg-9">
-                          <input
-                            value={credentials.yog ? credentials.yog : user.yog}
-                            onChange={onChange}
-                            id="yog"
-                            name="yog"
-                            className="form-control"
-                            style = {{background : "#fff7e4"}}
-                          
-                          />
-                        </div>
-                      </div>
+                      
                       <div className="row mb-3">
                         <label
                           htmlFor="Country"
