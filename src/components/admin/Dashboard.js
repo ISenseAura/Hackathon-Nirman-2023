@@ -7,7 +7,7 @@ let Dashboard = () => {
       <div className="row">
         <div className="col-lg-6">
           <div className="card">
-            <div className="card-body" style = {{background : "#fff7e4"}}>
+            <div className="card-body" style = {{background : "#fff7e4",width:"165vh"}}>
               <h5 className="card-title">This Week </h5>
               {/* Default List group */}
               <a href = '' style = {{background : "#fff7e4"}}>
