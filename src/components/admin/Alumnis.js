@@ -116,7 +116,7 @@ let Alumnis = () => {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-danger"
+                              className="btn btn-warning"
                               data-aria-label="verify"
                             >
                               {" "}

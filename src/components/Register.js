@@ -244,7 +244,7 @@ let Register = () => {
                     onChange={onChange}
                     id="pin"
                     name="pin"
-                    placeholder="Enter Year of Graduation"
+                    placeholder="Enter Pin Code"
                     required
                   />
                 </div>
